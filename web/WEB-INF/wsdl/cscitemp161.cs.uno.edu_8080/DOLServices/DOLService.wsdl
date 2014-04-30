@@ -4,35 +4,11 @@
 <xsd:import namespace="http://dol.com/" schemaLocation="http://cscitemp161.cs.uno.edu:8080/DOLServices/DOLService?xsd=1"/>
 </xsd:schema>
 </types>
-<message name="dropSkillFromOccupation">
-<part name="parameters" element="tns:dropSkillFromOccupation"/>
-</message>
-<message name="dropSkillFromOccupationResponse">
-<part name="parameters" element="tns:dropSkillFromOccupationResponse"/>
-</message>
 <message name="getOccupationFromSkill">
 <part name="parameters" element="tns:getOccupationFromSkill"/>
 </message>
 <message name="getOccupationFromSkillResponse">
 <part name="parameters" element="tns:getOccupationFromSkillResponse"/>
-</message>
-<message name="getSkillsByType">
-<part name="parameters" element="tns:getSkillsByType"/>
-</message>
-<message name="getSkillsByTypeResponse">
-<part name="parameters" element="tns:getSkillsByTypeResponse"/>
-</message>
-<message name="getOccupationsByType">
-<part name="parameters" element="tns:getOccupationsByType"/>
-</message>
-<message name="getOccupationsByTypeResponse">
-<part name="parameters" element="tns:getOccupationsByTypeResponse"/>
-</message>
-<message name="addSkillToOccupation">
-<part name="parameters" element="tns:addSkillToOccupation"/>
-</message>
-<message name="addSkillToOccupationResponse">
-<part name="parameters" element="tns:addSkillToOccupationResponse"/>
 </message>
 <message name="getSkillsFromOccupation">
 <part name="parameters" element="tns:getSkillsFromOccupation"/>
@@ -71,25 +47,9 @@
 <part name="fault" element="tns:NonexistentSkillException"/>
 </message>
 <portType name="DOLService">
-<operation name="dropSkillFromOccupation">
-<input wsam:Action="http://dol.com/DOLService/dropSkillFromOccupationRequest" message="tns:dropSkillFromOccupation"/>
-<output wsam:Action="http://dol.com/DOLService/dropSkillFromOccupationResponse" message="tns:dropSkillFromOccupationResponse"/>
-</operation>
 <operation name="getOccupationFromSkill">
 <input wsam:Action="http://dol.com/DOLService/getOccupationFromSkillRequest" message="tns:getOccupationFromSkill"/>
 <output wsam:Action="http://dol.com/DOLService/getOccupationFromSkillResponse" message="tns:getOccupationFromSkillResponse"/>
-</operation>
-<operation name="getSkillsByType">
-<input wsam:Action="http://dol.com/DOLService/getSkillsByTypeRequest" message="tns:getSkillsByType"/>
-<output wsam:Action="http://dol.com/DOLService/getSkillsByTypeResponse" message="tns:getSkillsByTypeResponse"/>
-</operation>
-<operation name="getOccupationsByType">
-<input wsam:Action="http://dol.com/DOLService/getOccupationsByTypeRequest" message="tns:getOccupationsByType"/>
-<output wsam:Action="http://dol.com/DOLService/getOccupationsByTypeResponse" message="tns:getOccupationsByTypeResponse"/>
-</operation>
-<operation name="addSkillToOccupation">
-<input wsam:Action="http://dol.com/DOLService/addSkillToOccupationRequest" message="tns:addSkillToOccupation"/>
-<output wsam:Action="http://dol.com/DOLService/addSkillToOccupationResponse" message="tns:addSkillToOccupationResponse"/>
 </operation>
 <operation name="getSkillsFromOccupation">
 <input wsam:Action="http://dol.com/DOLService/getSkillsFromOccupationRequest" message="tns:getSkillsFromOccupation"/>
@@ -116,43 +76,7 @@
 </portType>
 <binding name="DOLServicePortBinding" type="tns:DOLService">
 <soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
-<operation name="dropSkillFromOccupation">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
 <operation name="getOccupationFromSkill">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getSkillsByType">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="getOccupationsByType">
-<soap:operation soapAction=""/>
-<input>
-<soap:body use="literal"/>
-</input>
-<output>
-<soap:body use="literal"/>
-</output>
-</operation>
-<operation name="addSkillToOccupation">
 <soap:operation soapAction=""/>
 <input>
 <soap:body use="literal"/>

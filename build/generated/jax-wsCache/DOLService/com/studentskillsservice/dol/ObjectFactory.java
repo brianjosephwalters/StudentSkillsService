@@ -24,25 +24,17 @@ import javax.xml.namespace.QName;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _GetOccupationsByTypeResponse_QNAME = new QName("http://dol.com/", "getOccupationsByTypeResponse");
-    private final static QName _GetOccupationsByType_QNAME = new QName("http://dol.com/", "getOccupationsByType");
-    private final static QName _GetSkillsByType_QNAME = new QName("http://dol.com/", "getSkillsByType");
     private final static QName _GetOccupation_QNAME = new QName("http://dol.com/", "getOccupation");
-    private final static QName _GetAllOccupations_QNAME = new QName("http://dol.com/", "getAllOccupations");
     private final static QName _GetSkill_QNAME = new QName("http://dol.com/", "getSkill");
+    private final static QName _GetAllOccupations_QNAME = new QName("http://dol.com/", "getAllOccupations");
     private final static QName _GetSkillsFromOccupationResponse_QNAME = new QName("http://dol.com/", "getSkillsFromOccupationResponse");
     private final static QName _GetAllOccupationsResponse_QNAME = new QName("http://dol.com/", "getAllOccupationsResponse");
-    private final static QName _AddSkillToOccupation_QNAME = new QName("http://dol.com/", "addSkillToOccupation");
     private final static QName _GetAllSkillsResponse_QNAME = new QName("http://dol.com/", "getAllSkillsResponse");
     private final static QName _GetOccupationResponse_QNAME = new QName("http://dol.com/", "getOccupationResponse");
-    private final static QName _DropSkillFromOccupationResponse_QNAME = new QName("http://dol.com/", "dropSkillFromOccupationResponse");
-    private final static QName _DropSkillFromOccupation_QNAME = new QName("http://dol.com/", "dropSkillFromOccupation");
-    private final static QName _AddSkillToOccupationResponse_QNAME = new QName("http://dol.com/", "addSkillToOccupationResponse");
-    private final static QName _GetSkillResponse_QNAME = new QName("http://dol.com/", "getSkillResponse");
     private final static QName _NonexistentSkillException_QNAME = new QName("http://dol.com/", "NonexistentSkillException");
-    private final static QName _GetSkillsByTypeResponse_QNAME = new QName("http://dol.com/", "getSkillsByTypeResponse");
-    private final static QName _GetOccupationFromSkillResponse_QNAME = new QName("http://dol.com/", "getOccupationFromSkillResponse");
+    private final static QName _GetSkillResponse_QNAME = new QName("http://dol.com/", "getSkillResponse");
     private final static QName _GetAllSkills_QNAME = new QName("http://dol.com/", "getAllSkills");
+    private final static QName _GetOccupationFromSkillResponse_QNAME = new QName("http://dol.com/", "getOccupationFromSkillResponse");
     private final static QName _GetSkillsFromOccupation_QNAME = new QName("http://dol.com/", "getSkillsFromOccupation");
     private final static QName _GetOccupationFromSkill_QNAME = new QName("http://dol.com/", "getOccupationFromSkill");
     private final static QName _NonexistentOccupationException_QNAME = new QName("http://dol.com/", "NonexistentOccupationException");
@@ -55,11 +47,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link AddSkillToOccupationResponse }
+     * Create an instance of {@link NonexistentSkillException }
      * 
      */
-    public AddSkillToOccupationResponse createAddSkillToOccupationResponse() {
-        return new AddSkillToOccupationResponse();
+    public NonexistentSkillException createNonexistentSkillException() {
+        return new NonexistentSkillException();
     }
 
     /**
@@ -71,19 +63,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link NonexistentSkillException }
+     * Create an instance of {@link GetAllSkills }
      * 
      */
-    public NonexistentSkillException createNonexistentSkillException() {
-        return new NonexistentSkillException();
-    }
-
-    /**
-     * Create an instance of {@link GetSkillsByTypeResponse }
-     * 
-     */
-    public GetSkillsByTypeResponse createGetSkillsByTypeResponse() {
-        return new GetSkillsByTypeResponse();
+    public GetAllSkills createGetAllSkills() {
+        return new GetAllSkills();
     }
 
     /**
@@ -95,35 +79,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetAllSkills }
-     * 
-     */
-    public GetAllSkills createGetAllSkills() {
-        return new GetAllSkills();
-    }
-
-    /**
      * Create an instance of {@link GetOccupationResponse }
      * 
      */
     public GetOccupationResponse createGetOccupationResponse() {
         return new GetOccupationResponse();
-    }
-
-    /**
-     * Create an instance of {@link DropSkillFromOccupationResponse }
-     * 
-     */
-    public DropSkillFromOccupationResponse createDropSkillFromOccupationResponse() {
-        return new DropSkillFromOccupationResponse();
-    }
-
-    /**
-     * Create an instance of {@link DropSkillFromOccupation }
-     * 
-     */
-    public DropSkillFromOccupation createDropSkillFromOccupation() {
-        return new DropSkillFromOccupation();
     }
 
     /**
@@ -159,43 +119,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetOccupationsByTypeResponse }
-     * 
-     */
-    public GetOccupationsByTypeResponse createGetOccupationsByTypeResponse() {
-        return new GetOccupationsByTypeResponse();
-    }
-
-    /**
-     * Create an instance of {@link GetOccupationsByType }
-     * 
-     */
-    public GetOccupationsByType createGetOccupationsByType() {
-        return new GetOccupationsByType();
-    }
-
-    /**
-     * Create an instance of {@link GetSkillsByType }
-     * 
-     */
-    public GetSkillsByType createGetSkillsByType() {
-        return new GetSkillsByType();
-    }
-
-    /**
      * Create an instance of {@link GetAllOccupationsResponse }
      * 
      */
     public GetAllOccupationsResponse createGetAllOccupationsResponse() {
         return new GetAllOccupationsResponse();
-    }
-
-    /**
-     * Create an instance of {@link AddSkillToOccupation }
-     * 
-     */
-    public AddSkillToOccupation createAddSkillToOccupation() {
-        return new AddSkillToOccupation();
     }
 
     /**
@@ -215,19 +143,19 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link GetSkill }
-     * 
-     */
-    public GetSkill createGetSkill() {
-        return new GetSkill();
-    }
-
-    /**
      * Create an instance of {@link GetAllOccupations }
      * 
      */
     public GetAllOccupations createGetAllOccupations() {
         return new GetAllOccupations();
+    }
+
+    /**
+     * Create an instance of {@link GetSkill }
+     * 
+     */
+    public GetSkill createGetSkill() {
+        return new GetSkill();
     }
 
     /**
@@ -247,33 +175,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetOccupationsByTypeResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "getOccupationsByTypeResponse")
-    public JAXBElement<GetOccupationsByTypeResponse> createGetOccupationsByTypeResponse(GetOccupationsByTypeResponse value) {
-        return new JAXBElement<GetOccupationsByTypeResponse>(_GetOccupationsByTypeResponse_QNAME, GetOccupationsByTypeResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetOccupationsByType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "getOccupationsByType")
-    public JAXBElement<GetOccupationsByType> createGetOccupationsByType(GetOccupationsByType value) {
-        return new JAXBElement<GetOccupationsByType>(_GetOccupationsByType_QNAME, GetOccupationsByType.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSkillsByType }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "getSkillsByType")
-    public JAXBElement<GetSkillsByType> createGetSkillsByType(GetSkillsByType value) {
-        return new JAXBElement<GetSkillsByType>(_GetSkillsByType_QNAME, GetSkillsByType.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetOccupation }{@code >}}
      * 
      */
@@ -283,21 +184,21 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllOccupations }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "getAllOccupations")
-    public JAXBElement<GetAllOccupations> createGetAllOccupations(GetAllOccupations value) {
-        return new JAXBElement<GetAllOccupations>(_GetAllOccupations_QNAME, GetAllOccupations.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetSkill }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://dol.com/", name = "getSkill")
     public JAXBElement<GetSkill> createGetSkill(GetSkill value) {
         return new JAXBElement<GetSkill>(_GetSkill_QNAME, GetSkill.class, null, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllOccupations }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://dol.com/", name = "getAllOccupations")
+    public JAXBElement<GetAllOccupations> createGetAllOccupations(GetAllOccupations value) {
+        return new JAXBElement<GetAllOccupations>(_GetAllOccupations_QNAME, GetAllOccupations.class, null, value);
     }
 
     /**
@@ -319,15 +220,6 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddSkillToOccupation }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "addSkillToOccupation")
-    public JAXBElement<AddSkillToOccupation> createAddSkillToOccupation(AddSkillToOccupation value) {
-        return new JAXBElement<AddSkillToOccupation>(_AddSkillToOccupation_QNAME, AddSkillToOccupation.class, null, value);
-    }
-
-    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link GetAllSkillsResponse }{@code >}}
      * 
      */
@@ -346,30 +238,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DropSkillFromOccupationResponse }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link NonexistentSkillException }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "dropSkillFromOccupationResponse")
-    public JAXBElement<DropSkillFromOccupationResponse> createDropSkillFromOccupationResponse(DropSkillFromOccupationResponse value) {
-        return new JAXBElement<DropSkillFromOccupationResponse>(_DropSkillFromOccupationResponse_QNAME, DropSkillFromOccupationResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link DropSkillFromOccupation }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "dropSkillFromOccupation")
-    public JAXBElement<DropSkillFromOccupation> createDropSkillFromOccupation(DropSkillFromOccupation value) {
-        return new JAXBElement<DropSkillFromOccupation>(_DropSkillFromOccupation_QNAME, DropSkillFromOccupation.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link AddSkillToOccupationResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "addSkillToOccupationResponse")
-    public JAXBElement<AddSkillToOccupationResponse> createAddSkillToOccupationResponse(AddSkillToOccupationResponse value) {
-        return new JAXBElement<AddSkillToOccupationResponse>(_AddSkillToOccupationResponse_QNAME, AddSkillToOccupationResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://dol.com/", name = "NonexistentSkillException")
+    public JAXBElement<NonexistentSkillException> createNonexistentSkillException(NonexistentSkillException value) {
+        return new JAXBElement<NonexistentSkillException>(_NonexistentSkillException_QNAME, NonexistentSkillException.class, null, value);
     }
 
     /**
@@ -382,21 +256,12 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link NonexistentSkillException }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllSkills }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "NonexistentSkillException")
-    public JAXBElement<NonexistentSkillException> createNonexistentSkillException(NonexistentSkillException value) {
-        return new JAXBElement<NonexistentSkillException>(_NonexistentSkillException_QNAME, NonexistentSkillException.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetSkillsByTypeResponse }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "getSkillsByTypeResponse")
-    public JAXBElement<GetSkillsByTypeResponse> createGetSkillsByTypeResponse(GetSkillsByTypeResponse value) {
-        return new JAXBElement<GetSkillsByTypeResponse>(_GetSkillsByTypeResponse_QNAME, GetSkillsByTypeResponse.class, null, value);
+    @XmlElementDecl(namespace = "http://dol.com/", name = "getAllSkills")
+    public JAXBElement<GetAllSkills> createGetAllSkills(GetAllSkills value) {
+        return new JAXBElement<GetAllSkills>(_GetAllSkills_QNAME, GetAllSkills.class, null, value);
     }
 
     /**
@@ -406,15 +271,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://dol.com/", name = "getOccupationFromSkillResponse")
     public JAXBElement<GetOccupationFromSkillResponse> createGetOccupationFromSkillResponse(GetOccupationFromSkillResponse value) {
         return new JAXBElement<GetOccupationFromSkillResponse>(_GetOccupationFromSkillResponse_QNAME, GetOccupationFromSkillResponse.class, null, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link GetAllSkills }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://dol.com/", name = "getAllSkills")
-    public JAXBElement<GetAllSkills> createGetAllSkills(GetAllSkills value) {
-        return new JAXBElement<GetAllSkills>(_GetAllSkills_QNAME, GetAllSkills.class, null, value);
     }
 
     /**

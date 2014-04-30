@@ -4,14 +4,6 @@
 
 <xs:element name="NonexistentSkillException" type="tns:NonexistentSkillException"/>
 
-<xs:element name="addSkillToOccupation" type="tns:addSkillToOccupation"/>
-
-<xs:element name="addSkillToOccupationResponse" type="tns:addSkillToOccupationResponse"/>
-
-<xs:element name="dropSkillFromOccupation" type="tns:dropSkillFromOccupation"/>
-
-<xs:element name="dropSkillFromOccupationResponse" type="tns:dropSkillFromOccupationResponse"/>
-
 <xs:element name="getAllOccupations" type="tns:getAllOccupations"/>
 
 <xs:element name="getAllOccupationsResponse" type="tns:getAllOccupationsResponse"/>
@@ -28,77 +20,13 @@
 
 <xs:element name="getOccupationResponse" type="tns:getOccupationResponse"/>
 
-<xs:element name="getOccupationsByType" type="tns:getOccupationsByType"/>
-
-<xs:element name="getOccupationsByTypeResponse" type="tns:getOccupationsByTypeResponse"/>
-
 <xs:element name="getSkill" type="tns:getSkill"/>
 
 <xs:element name="getSkillResponse" type="tns:getSkillResponse"/>
 
-<xs:element name="getSkillsByType" type="tns:getSkillsByType"/>
-
-<xs:element name="getSkillsByTypeResponse" type="tns:getSkillsByTypeResponse"/>
-
 <xs:element name="getSkillsFromOccupation" type="tns:getSkillsFromOccupation"/>
 
 <xs:element name="getSkillsFromOccupationResponse" type="tns:getSkillsFromOccupationResponse"/>
-
-<xs:complexType name="getOccupationsByType">
-<xs:sequence>
-<xs:element name="skillType" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getOccupationsByTypeResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:occupation" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="occupation">
-<xs:sequence>
-<xs:element name="description" type="xs:string" minOccurs="0"/>
-<xs:element name="occupationID" type="xs:string" minOccurs="0"/>
-<xs:element name="title" type="xs:string" minOccurs="0"/>
-<xs:element name="type" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getSkillsByType">
-<xs:sequence>
-<xs:element name="skillType" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="getSkillsByTypeResponse">
-<xs:sequence>
-<xs:element name="return" type="tns:skill" minOccurs="0" maxOccurs="unbounded"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="skill">
-<xs:sequence>
-<xs:element name="description" type="xs:string" minOccurs="0"/>
-<xs:element name="level" type="xs:int" minOccurs="0"/>
-<xs:element name="name" type="xs:string" minOccurs="0"/>
-<xs:element name="skillID" type="xs:string" minOccurs="0"/>
-<xs:element name="type" type="xs:string" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="dropSkillFromOccupation">
-<xs:sequence>
-<xs:element name="skillID" type="xs:int" minOccurs="0"/>
-<xs:element name="occupationID" type="xs:int" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="dropSkillFromOccupationResponse">
-<xs:sequence>
-<xs:element name="return" type="xs:boolean"/>
-</xs:sequence>
-</xs:complexType>
 
 <xs:complexType name="getOccupation">
 <xs:sequence>
@@ -109,6 +37,15 @@
 <xs:complexType name="getOccupationResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:occupation" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="occupation">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="occupationID" type="xs:string" minOccurs="0"/>
+<xs:element name="title" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -126,6 +63,16 @@
 <xs:complexType name="getAllSkillsResponse">
 <xs:sequence>
 <xs:element name="return" type="tns:skill" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="skill">
+<xs:sequence>
+<xs:element name="description" type="xs:string" minOccurs="0"/>
+<xs:element name="level" type="xs:int" minOccurs="0"/>
+<xs:element name="name" type="xs:string" minOccurs="0"/>
+<xs:element name="skillID" type="xs:string" minOccurs="0"/>
+<xs:element name="type" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -160,7 +107,7 @@
 
 <xs:complexType name="getOccupationFromSkill">
 <xs:sequence>
-<xs:element name="skillID" type="xs:int" minOccurs="0"/>
+<xs:element name="skillID" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -172,7 +119,7 @@
 
 <xs:complexType name="getSkillsFromOccupation">
 <xs:sequence>
-<xs:element name="occupationID" type="xs:int" minOccurs="0"/>
+<xs:element name="occupationID" type="xs:string" minOccurs="0"/>
 </xs:sequence>
 </xs:complexType>
 
@@ -180,16 +127,5 @@
 <xs:sequence>
 <xs:element name="return" type="tns:skill" minOccurs="0" maxOccurs="unbounded"/>
 </xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="addSkillToOccupation">
-<xs:sequence>
-<xs:element name="occupationID" type="xs:int" minOccurs="0"/>
-<xs:element name="skillID" type="xs:int" minOccurs="0"/>
-</xs:sequence>
-</xs:complexType>
-
-<xs:complexType name="addSkillToOccupationResponse">
-<xs:sequence/>
 </xs:complexType>
 </xs:schema>

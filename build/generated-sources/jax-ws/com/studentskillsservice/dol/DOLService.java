@@ -28,24 +28,6 @@ public interface DOLService {
 
     /**
      * 
-     * @param occupationID
-     * @param skillID
-     * @return
-     *     returns boolean
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "dropSkillFromOccupation", targetNamespace = "http://dol.com/", className = "com.studentskillsservice.dol.DropSkillFromOccupation")
-    @ResponseWrapper(localName = "dropSkillFromOccupationResponse", targetNamespace = "http://dol.com/", className = "com.studentskillsservice.dol.DropSkillFromOccupationResponse")
-    @Action(input = "http://dol.com/DOLService/dropSkillFromOccupationRequest", output = "http://dol.com/DOLService/dropSkillFromOccupationResponse")
-    public boolean dropSkillFromOccupation(
-        @WebParam(name = "skillID", targetNamespace = "")
-        Integer skillID,
-        @WebParam(name = "occupationID", targetNamespace = "")
-        Integer occupationID);
-
-    /**
-     * 
      * @param skillID
      * @return
      *     returns java.util.List<com.studentskillsservice.dol.Occupation>
@@ -57,52 +39,7 @@ public interface DOLService {
     @Action(input = "http://dol.com/DOLService/getOccupationFromSkillRequest", output = "http://dol.com/DOLService/getOccupationFromSkillResponse")
     public List<Occupation> getOccupationFromSkill(
         @WebParam(name = "skillID", targetNamespace = "")
-        Integer skillID);
-
-    /**
-     * 
-     * @param skillType
-     * @return
-     *     returns java.util.List<com.studentskillsservice.dol.Skill>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getSkillsByType", targetNamespace = "http://dol.com/", className = "com.studentskillsservice.dol.GetSkillsByType")
-    @ResponseWrapper(localName = "getSkillsByTypeResponse", targetNamespace = "http://dol.com/", className = "com.studentskillsservice.dol.GetSkillsByTypeResponse")
-    @Action(input = "http://dol.com/DOLService/getSkillsByTypeRequest", output = "http://dol.com/DOLService/getSkillsByTypeResponse")
-    public List<Skill> getSkillsByType(
-        @WebParam(name = "skillType", targetNamespace = "")
-        String skillType);
-
-    /**
-     * 
-     * @param skillType
-     * @return
-     *     returns java.util.List<com.studentskillsservice.dol.Occupation>
-     */
-    @WebMethod
-    @WebResult(targetNamespace = "")
-    @RequestWrapper(localName = "getOccupationsByType", targetNamespace = "http://dol.com/", className = "com.studentskillsservice.dol.GetOccupationsByType")
-    @ResponseWrapper(localName = "getOccupationsByTypeResponse", targetNamespace = "http://dol.com/", className = "com.studentskillsservice.dol.GetOccupationsByTypeResponse")
-    @Action(input = "http://dol.com/DOLService/getOccupationsByTypeRequest", output = "http://dol.com/DOLService/getOccupationsByTypeResponse")
-    public List<Occupation> getOccupationsByType(
-        @WebParam(name = "skillType", targetNamespace = "")
-        String skillType);
-
-    /**
-     * 
-     * @param occupationID
-     * @param skillID
-     */
-    @WebMethod
-    @RequestWrapper(localName = "addSkillToOccupation", targetNamespace = "http://dol.com/", className = "com.studentskillsservice.dol.AddSkillToOccupation")
-    @ResponseWrapper(localName = "addSkillToOccupationResponse", targetNamespace = "http://dol.com/", className = "com.studentskillsservice.dol.AddSkillToOccupationResponse")
-    @Action(input = "http://dol.com/DOLService/addSkillToOccupationRequest", output = "http://dol.com/DOLService/addSkillToOccupationResponse")
-    public void addSkillToOccupation(
-        @WebParam(name = "occupationID", targetNamespace = "")
-        Integer occupationID,
-        @WebParam(name = "skillID", targetNamespace = "")
-        Integer skillID);
+        String skillID);
 
     /**
      * 
@@ -117,7 +54,7 @@ public interface DOLService {
     @Action(input = "http://dol.com/DOLService/getSkillsFromOccupationRequest", output = "http://dol.com/DOLService/getSkillsFromOccupationResponse")
     public List<Skill> getSkillsFromOccupation(
         @WebParam(name = "occupationID", targetNamespace = "")
-        Integer occupationID);
+        String occupationID);
 
     /**
      * 
